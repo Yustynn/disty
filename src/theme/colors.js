@@ -6,22 +6,22 @@
  */
 
 const app = {
-  background: '#E9EBEE',
+  background: 'white',
   cardBackground: '#FFFFFF',
   listItemBackground: '#FFFFFF',
 };
 
 const brand = {
   brand: {
-    primary: '#0E4EF8',
-    secondary: '#17233D',
+    primary: '#9CB67F',
+    secondary: '#2073D5'
   },
 };
 
 const text = {
-  textPrimary: '#222222',
+  textPrimary: '#707070',
   textSecondary: '#777777',
-  headingPrimary: brand.brand.primary,
+  headingPrimary: '#707070',
   headingSecondary: brand.brand.primary,
 };
 
@@ -35,6 +35,9 @@ const tabbar = {
     iconDefault: '#BABDC2',
     iconSelected: brand.brand.primary,
   },
+};
+
+const others = {
 };
 
 export default {

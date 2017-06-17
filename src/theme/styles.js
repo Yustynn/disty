@@ -63,7 +63,8 @@ export default {
     fontSize: Fonts.h1.size,
     lineHeight: Fonts.h1.lineHeight,
     color: Colors.headingPrimary,
-    fontWeight: '800',
+    fontWeight: '400',
+    textAlign: 'center',
     margin: 0,
     marginBottom: 4,
     left: 0,
@@ -74,7 +75,8 @@ export default {
     fontSize: Fonts.h2.size,
     lineHeight: Fonts.h2.lineHeight,
     color: Colors.headingPrimary,
-    fontWeight: '800',
+    fontWeight: '400',
+    textAlign: 'center',
     margin: 0,
     marginBottom: 4,
     left: 0,
@@ -241,4 +243,8 @@ export default {
     borderTopColor: Colors.border,
     borderTopWidth: 1,
   },
+  button: {
+    backgroundColor: Colors.brand.primary,
+    color: 'white'
+  }
 };

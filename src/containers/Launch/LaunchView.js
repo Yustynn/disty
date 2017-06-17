@@ -46,8 +46,8 @@ class AppLaunch extends Component {
 
     // Preload content here
     Promise.all([
-      this.props.getMeals(),
-      this.props.getRecipes(),
+      //this.props.getMeals(),
+      //this.props.getRecipes(),
     ]).then(() => {
       // Once we've preloaded basic content,
       // - Try to authenticate based on existing token
@@ -56,6 +56,7 @@ class AppLaunch extends Component {
         .then(() => Actions.app({ type: 'reset' }))
         // Not Logged in, show Login screen
         .catch(() => Actions.authenticate({ type: 'reset' }));
+        //.catch(() => Actions.home({ type: 'reset' }));
     }).catch(err => Alert.alert(err.message));
   }
 

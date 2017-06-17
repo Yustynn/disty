@@ -19,6 +19,7 @@ import Placeholder from '@components/general/Placeholder';
 import AuthScenes from './auth';
 import TabsScenes from './tabs';
 
+import Home from '@containers/Home/HomeContainer';
 /* Routes ==================================================================== */
 export default Actions.create(
   <Scene key={'root'} {...AppConfig.navbarProps}>

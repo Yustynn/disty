@@ -22,6 +22,8 @@ import StyleGuide from '@containers/StyleGuideView';
 import Recipes from '@containers/recipes/Browse/BrowseContainer';
 import RecipeView from '@containers/recipes/RecipeView';
 
+import Home from '@containers/Home/HomeContainer';
+
 const navbarPropsTabs = {
   ...AppConfig.navbarProps,
   renderLeftButton: () => <NavbarMenuButton />,
@@ -37,14 +39,14 @@ const scenes = (
     <Scene
       {...navbarPropsTabs}
       key={'recipes'}
-      title={'Recipes'}
-      icon={props => TabIcon({ ...props, icon: 'search' })}
+      title={'Home'}
+      icon={props => TabIcon({ ...props, type: 'ionicon', icon: 'md-cash' })}
     >
       <Scene
         {...navbarPropsTabs}
-        key={'recipesListing'}
-        component={Recipes}
-        title={'Recipes'}
+        key={'homePage'}
+        component={Home}
+        title={'Home'}
         analyticsDesc={'Recipes: Browse Recipes'}
       />
       <Scene
@@ -61,7 +63,7 @@ const scenes = (
       {...navbarPropsTabs}
       title={'Coming Soon'}
       component={Placeholder}
-      icon={props => TabIcon({ ...props, icon: 'timeline' })}
+      icon={props => TabIcon({ ...props, type: 'ionicon', icon: 'ios-add' })}
       analyticsDesc={'Placeholder: Coming Soon'}
     />
 
@@ -70,7 +72,7 @@ const scenes = (
       {...navbarPropsTabs}
       title={'Example Error'}
       component={Error}
-      icon={props => TabIcon({ ...props, icon: 'error' })}
+      icon={props => TabIcon({ ...props, type: 'ionicon', icon: 'ios-paper-outline' })}
       analyticsDesc={'Error: Example Error'}
     />
 
@@ -79,7 +81,7 @@ const scenes = (
       {...navbarPropsTabs}
       title={'Style Guide'}
       component={StyleGuide}
-      icon={props => TabIcon({ ...props, icon: 'speaker-notes' })}
+      icon={props => TabIcon({ ...props, type: 'ionicon', icon: 'ios-navigate-outline' })}
       analyticsDesc={'StyleGuide: Style Guide'}
     />
   </Scene>

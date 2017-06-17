@@ -13,8 +13,9 @@ import { Icon } from 'react-native-elements';
 import { AppColors } from '@theme/';
 
 /* Component ==================================================================== */
-const TabIcon = ({ icon, selected }) => (
+const TabIcon = ({ icon, selected, type}) => (
   <Icon
+    type={type}
     name={icon}
     size={26}
     color={selected ? AppColors.tabbar.iconSelected : AppColors.tabbar.iconDefault}

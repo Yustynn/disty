@@ -4,6 +4,7 @@
  * React Native Starter App
  * https://github.com/mcnamee/react-native-starter-app
  */
+import FullButton from './FullButton';
 
 import Alerts from './Alerts';
 import Button from './Button';
@@ -17,4 +18,6 @@ import FormInput from './FormInput';
 import FormLabel from './FormLabel';
 import FormValidationMessage from './FormValidationMessage';
 
-export { Alerts, Button, Card, Spacer, TabIcon, Text, List, ListItem, FormInput, FormLabel, FormValidationMessage };
+export { Alerts, Button, Card, Spacer, TabIcon, Text, List, ListItem, FormInput, FormLabel, FormValidationMessage ,
+
+FullButton};
