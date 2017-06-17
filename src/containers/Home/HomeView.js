@@ -38,12 +38,12 @@ class Home extends Component {
 
   render = () => {
     const balance = this.props.balance || 0;
-    const headerText = "Hey Ahnaf! It's good to see you again.";
+    const headerText = "Ahnaf! It's good to see you again.";
 
     return (
       <Screen headerText={headerText} btnOnPress={this.handleOnPress} imgSrc={require('../../images/smiley.png')} btnText='Make a Withdrawal'>
 
-        <Text p>Current Balance: $367.82</Text>
+        <Text p>Current Balance: ${balance.toFixed(2)}</Text>
 
       </Screen>
     )

@@ -6,6 +6,7 @@ import {
   TextInput,
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import Spinner from 'react-native-spinkit';
 
 // Consts and Libs
 import { AppStyles, AppSizes, AppColors } from '@theme/';
@@ -35,6 +36,10 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10
   },
+  beerText: {
+    paddingLeft: 20,
+    paddingRight: 20
+  },
 });
 
 /* Component ==================================================================== */
@@ -46,6 +51,7 @@ class Transcation extends Component {
     balance: 0,
     transactionAmt: 0,
   };
+
 
   handleChangeText = (t) => {
     this.props.setTransactionAmount(+t + 0.5);
@@ -78,11 +84,17 @@ class Transcation extends Component {
   renderMatching = () => {
     const headerText = 'Matching your withdrawal request…';
 
-    return (
-      <Screen imgSrc={require('../../images/matching.png')} headerText={headerText} hideBtn={true}>
-        <Text p>Grab a beer! We’ll send you a notification when we’ve found someone to cash you out!</Text>
-      </Screen>
+     return (
+      <View style={[AppStyles.containerCentered, AppStyles.container, styles.background]}>
+         <Spinner isVisible={true} size={100} type='WanderingCubes' color={AppColors.brand.primary}  />
+         <Spacer size={40} />
+        <Text h2>{headerText}</Text>
+         <Spacer size={20} />
+        <Text p style={[AppStyles.textCenterAligned, styles.beerText]}>Grab a beer! We’ll send you a notification when we’ve found someone to cash you out!</Text>
+        <Spacer size={150} />
+      </View>
     )
+
   }
 
 

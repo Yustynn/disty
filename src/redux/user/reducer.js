@@ -6,7 +6,7 @@
  */
 
 // Set initial state
-const initialState = {};
+const initialState = { balance: 272.50 };
 
 export default function userReducer(state = initialState, action) {
   switch (action.type) {
@@ -37,6 +37,9 @@ export default function userReducer(state = initialState, action) {
     }
     case 'USER_LOGOUT': {
       return {};
+    }
+    case 'USER_UPDATE_BALANCE': {
+      return {...state, balance: action.balance};
     }
     default:
       return state;

@@ -7,6 +7,8 @@ import {
 
 import { Icon } from 'react-native-elements';
 
+import { Actions } from 'react-native-router-flux';
+
 // Consts and Libs
 import { AppStyles, AppSizes, AppColors } from '@theme/';
 
@@ -56,6 +58,7 @@ class Screen extends Component {
           color={AppColors.brand.primaryLight} 
           size={30}
           containerStyle={styles.icon}
+          onPress={Actions.home}
         />
         <Image
           source={require('../../images/success.png')}

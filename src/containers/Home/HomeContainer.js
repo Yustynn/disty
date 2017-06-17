@@ -8,7 +8,8 @@ import * as RecipeActions from '@redux/recipes/actions';
 import AppLaunchRender from './HomeView';
 
 // What data from the store shall we send to the component?
-const mapStateToProps = () => ({
+const mapStateToProps = ({user}) => ({
+  balance: user.balance
 });
 
 // Any actions to map to the component?
