@@ -57,6 +57,10 @@ class Transcation extends Component {
     this.props.setTransactionAmount(+t + 0.5);
   }
 
+  componentWillUpdate = ({isMatchFound}) => {
+    if (isMatchFound) return Actions.matching();
+  }
+
   renderEnterAmount = () => {
     const { balance, transactionAmt } = this.props;
     const headerText = 'How much would you like to withdraw?';

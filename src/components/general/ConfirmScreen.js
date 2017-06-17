@@ -29,11 +29,9 @@ const styles = StyleSheet.create({
   whiteText: {
     color: '#FFF',
   },
-
-
   icon: {
     position: 'absolute',
-    top: 10,
+    top: 60,
     right: 10
   },
 
@@ -64,7 +62,8 @@ class Screen extends Component {
           source={require('../../images/success.png')}
           style={styles.image}
         />
-        <Text style={styles.header}>{headerText}</Text>
+        <Spacer size={30} />
+        <Text style={[styles.whiteText]} h1>{headerText}</Text>
         <Spacer size={40} />
         <Text style={styles.balance}>New balance: ${(balance || 0).toFixed(2)}</Text>
         <Spacer size={80} />

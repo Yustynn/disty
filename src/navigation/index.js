@@ -16,11 +16,12 @@ import Drawer from '@containers/ui/DrawerContainer';
 // Scenes
 import AppLaunch from '@containers/Launch/LaunchContainer';
 import Placeholder from '@components/general/Placeholder';
+import ConfirmScreen from '@components/general/ConfirmScreen';
 import AuthScenes from './auth';
 import TabsScenes from './tabs';
 
+import Matching from '@containers/Transaction/MatchingContainer';
 import Home from '@containers/Home/HomeContainer';
-import Transaction from '@containers/Transaction/TransactionContainer';
 /* Routes ==================================================================== */
 export default Actions.create(
   <Scene key={'root'} {...AppConfig.navbarProps}>
@@ -47,6 +48,18 @@ export default Actions.create(
         key={'comingSoon'}
         title={'Coming Soon'}
         component={Placeholder}
+        analyticsDesc={'Placeholder: Coming Soon'}
+      />
+      <Scene
+        key={'success'}
+        title={'Success!'}
+        component={ConfirmScreen}
+        analyticsDesc={'Placeholder: Coming Soon'}
+      />
+      <Scene
+        key={'matching'}
+        title={'Matching'}
+        component={Matching}
         analyticsDesc={'Placeholder: Coming Soon'}
       />
     </Scene>

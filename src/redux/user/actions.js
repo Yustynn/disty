@@ -171,3 +171,12 @@ export function logout() {
       dispatch({ type: 'USER_LOGOUT' });
     });
 }
+
+export function setBalance(balance) {
+  return dispatch => dispatch({
+    type: 'USER_SET_BALANCE',
+    balance
+  })
+}
+
+

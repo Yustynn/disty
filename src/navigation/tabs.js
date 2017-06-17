@@ -37,33 +37,30 @@ const navbarPropsTabs = {
 /* Routes ==================================================================== */
 const scenes = (
   <Scene key={'tabBar'} tabs tabBarIconContainerStyle={AppStyles.tabbar} pressOpacity={0.95}>
+ 
     <Scene
-      {...navbarPropsTabs}
       key={'home'}
+      {...navbarPropsTabs}
       title={'Home'}
+      component={Home}
+      icon={props => TabIcon({ ...props, type: 'ionicon', icon: 'ios-home-outline' })}
+      analyticsDesc={'Placeholder: Coming Soon'}
+   />
+
+   <Scene
+      {...navbarPropsTabs}
+      key={'transaction'}
+      component={Transaction}
+      analyticsDesc={'Recipes: Browse Recipes'}
+      title={'Transaction Request'}
       icon={props => TabIcon({ ...props, type: 'ionicon', icon: 'md-cash' })}
-    >
-      <Scene
-        {...navbarPropsTabs}
-        key={'homePage'}
-        component={Home}
-        title={'Home'}
-        analyticsDesc={'Recipes: Browse Recipes'}
-      />
-      <Scene
-        {...AppConfig.navbarProps}
-        key={'recipeView'}
-        component={RecipeView}
-        getTitle={props => ((props.title) ? props.title : 'View Recipe')}
-        analyticsDesc={'RecipeView: View Recipe'}
-      />
-    </Scene>
+    />
 
     <Scene
-      key={'transaction'}
+      key={'topUp'}
       {...navbarPropsTabs}
-      title={'Request Withdrawal'}
-      component={Transaction}
+      title={'Top Up'}
+      component={Placeholder}
       icon={props => TabIcon({ ...props, type: 'ionicon', icon: 'ios-add' })}
       analyticsDesc={'Placeholder: Coming Soon'}
     />
@@ -71,8 +68,8 @@ const scenes = (
     <Scene
       key={'error'}
       {...navbarPropsTabs}
-      title={'Example Error'}
-      component={Error}
+      title={'Transaction Log'}
+      component={Placeholder}
       icon={props => TabIcon({ ...props, type: 'ionicon', icon: 'ios-paper-outline' })}
       analyticsDesc={'Error: Example Error'}
     />

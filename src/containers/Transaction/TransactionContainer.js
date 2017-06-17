@@ -10,6 +10,7 @@ import TransactionView from './TransactionView';
 const mapStateToProps = ({transaction}) => ({
   transactionAmt: transaction.amount,
   isMatching: transaction.isMatching,
+  isMatchFound: transaction.isMatchFound,
 });
 
 // Any actions to map to the component?
