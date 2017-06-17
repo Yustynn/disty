@@ -5,6 +5,8 @@ import {
   StyleSheet,
 } from 'react-native';
 
+import { Icon } from 'react-native-elements';
+
 // Consts and Libs
 import { AppStyles, AppSizes, AppColors } from '@theme/';
 
@@ -14,15 +16,30 @@ import { Spacer, Text, FullButton } from '@ui/';
 /* Styles ==================================================================== */
 const styles = StyleSheet.create({
   background: {
-    backgroundColor: AppColors.background,
+    backgroundColor: AppColors.brand.primary,
     height: AppSizes.screen.height,
     width: AppSizes.screen.width,
   },
   image: {
-    height: AppSizes.screen.width * 0.25,
+    height: AppSizes.screen.width * 0.40,
     resizeMode: 'contain',
   },
   whiteText: {
+    color: '#FFF',
+  },
+
+
+  icon: {
+    position: 'absolute',
+    top: 10,
+    right: 10
+  },
+
+  balance: {
+    color: '#FFF',
+  },
+
+  header: {
     color: '#FFF',
   },
 });
@@ -30,23 +47,24 @@ const styles = StyleSheet.create({
 /* Component ==================================================================== */
 class Screen extends Component {
   render = () => {
-    const {imgSrc, children, btnText, btnOnClick} = this.props;
+    const {headerText, balance} = this.props;
 
     return (
       <View style={[AppStyles.containerCentered, AppStyles.container, styles.background]}>
-        <Image
-          source={imgSrc}
-          style={[styles.image]}
+        <Icon 
+          name='close' 
+          color={AppColors.brand.primaryLight} 
+          size={30}
+          containerStyle={styles.icon}
         />
-
-        <Spacer size={20} />
-
-        {children}
-
+        <Image
+          source={require('../../images/success.png')}
+          style={styles.image}
+        />
+        <Text style={styles.header}>{headerText}</Text>
+        <Spacer size={40} />
+        <Text style={styles.balance}>New balance: ${(balance || 0).toFixed(2)}</Text>
         <Spacer size={80} />
-
-        <FullButton text={btnText || ''} onClick={btnOnClick} />
-
       </View>
     )
   }

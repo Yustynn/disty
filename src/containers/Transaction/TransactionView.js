@@ -4,12 +4,14 @@ import {
   Image,
   StyleSheet,
 } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 // Consts and Libs
 import { AppStyles, AppSizes, AppColors } from '@theme/';
 
 // Components
-import { Spacer, Text, FullButton } from '@ui/';
+import { Button, Spacer, Text, FullButton } from '@ui/';
+import Screen from '@components/general/Screen';
 
 /* Styles ==================================================================== */
 const styles = StyleSheet.create({
@@ -18,7 +20,7 @@ const styles = StyleSheet.create({
     height: AppSizes.screen.height,
     width: AppSizes.screen.width,
   },
-  image: {
+  logo: {
     height: AppSizes.screen.width * 0.25,
     resizeMode: 'contain',
   },
@@ -28,28 +30,28 @@ const styles = StyleSheet.create({
 });
 
 /* Component ==================================================================== */
-class Screen extends Component {
+
+class Home extends Component {
+  static componentName = 'Home';
+
+
   render = () => {
-    const {imgSrc, children, btnText, btnOnClick} = this.props;
+    const balance = this.props.balance || 0;
 
     return (
-      <View style={[AppStyles.containerCentered, AppStyles.container, styles.background]}>
-        <Image
-          source={imgSrc}
-          style={[styles.image]}
-        />
+      <Screen imgSrc={require('../../images/smiley.png')} btnText='Make a Withdrawal'>
+       
+        <Text h2>Hey Ahnaf! It's good to see you again.</Text>
+
 
         <Spacer size={20} />
 
-        {children}
+        <Text p>Current Balance: $367.82</Text>
 
-        <Spacer size={80} />
-
-        <FullButton text={btnText || ''} onClick={btnOnClick} />
-
-      </View>
+      </Screen>
     )
   }
 }
 
-export default Screen;
+/* Export Component ==================================================================== */
+export default Home;

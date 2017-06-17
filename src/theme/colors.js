@@ -14,7 +14,8 @@ const app = {
 const brand = {
   brand: {
     primary: '#9CB67F',
-    secondary: '#2073D5'
+    secondary: '#2073D5',
+    primaryLight: '#C8E8A3',
   },
 };
 
