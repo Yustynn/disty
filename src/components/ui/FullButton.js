@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: AppColors.brand.primary,
     padding: 30,
-    paddingTop: 50,
-    paddingBottom: 50,
+    paddingTop: 40,
+    paddingBottom: 40,
     position: 'absolute',
     bottom: 0,
     width: AppSizes.screen.width,
@@ -23,9 +23,9 @@ const styles = StyleSheet.create({
   },
 }); 
 /* Component ==================================================================== */
-function CustomButton({onClick, text}) {
+function CustomButton({onPress, text}) {
   return (
-    <TouchableOpacity onClick={onClick} style={styles.container}>
+    <TouchableOpacity onPress={onPress} style={styles.container}>
       <Text style={styles.text}>{text.toUpperCase()}</Text>
     </TouchableOpacity>
   )

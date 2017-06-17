@@ -23,6 +23,7 @@ import Recipes from '@containers/recipes/Browse/BrowseContainer';
 import RecipeView from '@containers/recipes/RecipeView';
 
 import Home from '@containers/Home/HomeContainer';
+import Transaction from '@containers/Transaction/TransactionContainer';
 
 const navbarPropsTabs = {
   ...AppConfig.navbarProps,
@@ -38,7 +39,7 @@ const scenes = (
   <Scene key={'tabBar'} tabs tabBarIconContainerStyle={AppStyles.tabbar} pressOpacity={0.95}>
     <Scene
       {...navbarPropsTabs}
-      key={'recipes'}
+      key={'home'}
       title={'Home'}
       icon={props => TabIcon({ ...props, type: 'ionicon', icon: 'md-cash' })}
     >
@@ -59,10 +60,10 @@ const scenes = (
     </Scene>
 
     <Scene
-      key={'timeline'}
+      key={'transaction'}
       {...navbarPropsTabs}
-      title={'Coming Soon'}
-      component={Placeholder}
+      title={'Request Withdrawal'}
+      component={Transaction}
       icon={props => TabIcon({ ...props, type: 'ionicon', icon: 'ios-add' })}
       analyticsDesc={'Placeholder: Coming Soon'}
     />

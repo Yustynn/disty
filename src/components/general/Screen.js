@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     width: AppSizes.screen.width,
   },
   image: {
-    height: AppSizes.screen.width * 0.25,
+    width: AppSizes.screen.width * 0.25,
     resizeMode: 'contain',
   },
   whiteText: {
@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
 /* Component ==================================================================== */
 class Screen extends Component {
   render = () => {
-    const {imgSrc, children, btnText, btnOnClick} = this.props;
+    const {headerText, hideBtn, imgSrc, children, btnText, btnOnPress} = this.props;
+    const btn = hideBtn ? undefined : (<FullButton text={btnText || ''} onPress={btnOnPress} />);
 
     return (
       <View style={[AppStyles.containerCentered, AppStyles.container, styles.background]}>
@@ -41,11 +42,11 @@ class Screen extends Component {
 
         <Spacer size={20} />
 
+        <Text h2>{headerText}</Text>
         {children}
+        <Spacer size={150} />
 
-        <Spacer size={80} />
-
-        <FullButton text={btnText || ''} onClick={btnOnClick} />
+        {btn}
 
       </View>
     )

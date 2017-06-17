@@ -40,6 +40,10 @@ const styles = StyleSheet.create({
 class Authenticate extends Component {
   static componentName = 'Authenticate';
 
+  componentDidMount() {
+    return Actions.home()
+  }
+
   render = () => (
     <View style={[AppStyles.containerCentered, AppStyles.container, styles.background]}>
       <Image

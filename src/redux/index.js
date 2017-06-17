@@ -14,8 +14,13 @@ import sideMenu from '@redux/sidemenu/reducer';
 import user from '@redux/user/reducer';
 import recipe from '@redux/recipes/reducer';
 
+import transaction from '@redux/transaction/reducer';
+
 // Combine all
 const appReducer = combineReducers({
+  transaction,
+
+
   router,
   sideMenu,
   user,

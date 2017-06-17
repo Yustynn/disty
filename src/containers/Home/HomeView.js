@@ -34,17 +34,14 @@ const styles = StyleSheet.create({
 class Home extends Component {
   static componentName = 'Home';
 
+  handleOnPress = () => Actions.transaction() && console.log('hmm');
 
   render = () => {
     const balance = this.props.balance || 0;
+    const headerText = "Hey Ahnaf! It's good to see you again.";
 
     return (
-      <Screen imgSrc={require('../../images/smiley.png')} btnText='Make a Withdrawal'>
-       
-        <Text h2>Hey Ahnaf! It's good to see you again.</Text>
-
-
-        <Spacer size={20} />
+      <Screen headerText={headerText} btnOnPress={this.handleOnPress} imgSrc={require('../../images/smiley.png')} btnText='Make a Withdrawal'>
 
         <Text p>Current Balance: $367.82</Text>
 

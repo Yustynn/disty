@@ -20,6 +20,7 @@ import AuthScenes from './auth';
 import TabsScenes from './tabs';
 
 import Home from '@containers/Home/HomeContainer';
+import Transaction from '@containers/Transaction/TransactionContainer';
 /* Routes ==================================================================== */
 export default Actions.create(
   <Scene key={'root'} {...AppConfig.navbarProps}>
@@ -36,11 +37,10 @@ export default Actions.create(
     {/* Main App */}
     <Scene key={'app'} {...AppConfig.navbarProps} title={AppConfig.appName} hideNavBar={false} type={ActionConst.RESET}>
       {/* Drawer Side Menu */}
-      <Scene key={'home'} component={Drawer} initial={'tabBar'}>
+      <Scene key={'main'} component={Drawer} initial={'tabBar'}>
         {/* Tabbar */}
         {TabsScenes}
       </Scene>
-
       {/* General */}
       <Scene
         clone
