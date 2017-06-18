@@ -12,7 +12,7 @@ import Spinner from 'react-native-spinkit';
 import { AppStyles, AppSizes, AppColors } from '@theme/';
 
 // Components
-import { Button, Spacer, Text, FullButton } from '@ui/';
+import { InnerPut, Spacer, Text } from '@ui/';
 
 import { FormInput} from 'react-native-elements';
 import Screen from '@components/general/Screen';
@@ -72,17 +72,12 @@ class Transcation extends Component {
         btnText='Confirm'
         btnOnPress={this.props.setMatching}
       >
-        <FormInput
-          inputStyle={styles.input}
-          containerStyle={styles.inputContainer}
-          onChangeText={this.handleChangeText}
-        />
-        <Text p>+ $0.50 transfer fees</Text>
+        <InnerPut onChangeText={this.handleChangeText} />
+        <Text p>+$0.50 transfer fees</Text>
 
         <Text p>Total: ${(transactionAmt).toFixed(2)}</Text>
       </Screen>
     )
-
   }
 
   renderMatching = () => {
@@ -98,7 +93,6 @@ class Transcation extends Component {
         <Spacer size={150} />
       </View>
     )
-
   }
 
 

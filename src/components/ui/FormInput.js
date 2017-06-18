@@ -40,8 +40,9 @@ class CustomFormInput extends Component {
         borderBottomWidth: 1,
         backgroundColor: 'rgba(255,255,255,0.05)',
         marginTop: 10,
-        marginLeft: 0,
-        marginRight: 0,
+        marginLeft: 30,
+        marginRight: 30,
+        width: 200,
       }],
       inputStyle: [{
         color: AppColors.textPrimary,

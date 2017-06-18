@@ -5,6 +5,7 @@
  * https://github.com/mcnamee/react-native-starter-app
  */
 import FullButton from './FullButton';
+import InnerPut from './InnerPut';
 
 import Alerts from './Alerts';
 import Button from './Button';
@@ -20,4 +21,4 @@ import FormValidationMessage from './FormValidationMessage';
 
 export { Alerts, Button, Card, Spacer, TabIcon, Text, List, ListItem, FormInput, FormLabel, FormValidationMessage ,
 
-FullButton};
+FullButton, InnerPut};

@@ -14,7 +14,7 @@ import { AppStyles, AppSizes, AppColors } from '@theme/';
 // Components
 import { Button, Spacer, Text, FullButton } from '@ui/';
 
-import { FormInput} from 'react-native-elements';
+import { FormInput } from 'react-native-elements';
 import Screen from '@components/general/Screen';
 
 /* Styles ==================================================================== */
@@ -26,15 +26,6 @@ const styles = StyleSheet.create({
   },
   whiteText: {
     color: '#FFF',
-  },
-  input: {
-    textAlign: 'center',
-    fontSize: 30,
-    color: AppColors.brand.primary,
-  },
-  inputContainer: {
-    paddingLeft: 10,
-    paddingRight: 10
   },
   beerText: {
     paddingLeft: 20,
@@ -71,7 +62,7 @@ class Matching extends Component {
   render = () => {
     const {balance, transactionAmt, setAwaitingCash, isAwaitingCash} = this.props;
 
-    const headerText = isAwaitingCash ? 'We found you an ATM!' : 'Collect your Cash!';
+    const headerText = isAwaitingCash ? 'Collect your Cash!' : 'We found you an ATM!'; 
     const transDisp = [transactionAmt-0.5, transactionAmt].map(t=>'$'+t.toFixed(2));
 
      return (

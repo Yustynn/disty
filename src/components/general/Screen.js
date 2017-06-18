@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
     flex: 1,
+    justifyContent: 'flex-start',
   },
   imageContainer: {
     alignItems: 'center',
@@ -30,6 +31,7 @@ const styles = StyleSheet.create({
     width: AppSizes.screen.width * 0.25,
   },
   image: {
+    height: AppSizes.screen.height * 0.25,
     width: AppSizes.screen.width * 0.25,
     resizeMode: 'contain',
   },
@@ -46,6 +48,7 @@ class Screen extends Component {
 
     return (
       <View style={[AppStyles.containerCentered, AppStyles.container, styles.background]}>
+        <Spacer size={80} />
         <View style={[AppStyles.containerCentered, AppStyles.container, styles.containerPadding]}>
           <View style={styles.imageContainer}>
             <Image
@@ -54,7 +57,10 @@ class Screen extends Component {
             />
           </View>
 
+          <Spacer size={20} />
+
           <Text h2>{headerText}</Text>
+          <Spacer size={20} />
           {children}
           {btn}
         </View>

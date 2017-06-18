@@ -41,7 +41,8 @@ class Authenticate extends Component {
   static componentName = 'Authenticate';
 
   componentDidMount() {
-    return Actions.home()
+    console.log('MOUNTED\n\n\n\n')
+    Actions.home()
   }
 
   render = () => (
