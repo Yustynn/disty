@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
     height: AppSizes.screen.height,
     width: AppSizes.screen.width,
   },
+  container: {
+    paddingTop: 40
+  },
   whiteText: {
     color: '#FFF',
   },
@@ -66,16 +69,17 @@ class Matching extends Component {
     const transDisp = [transactionAmt-0.5, transactionAmt].map(t=>'$'+t.toFixed(2));
 
      return (
-       <Screen
-         headerText={headerText}
-         imgSrc={require('../../images/atm.png')}
-         btnText={isAwaitingCash ? 'I Got My Cash!' : 'Confirm Meetup'}
-         btnOnPress={isAwaitingCash ? this.handleCollectedCash : setAwaitingCash}
-       >
-         <Text>Location: Blk 71 Ayer Rajah, #03-24</Text>
-         <Text>Amount: {transDisp[0]} ({transDisp[1]} total)</Text>
-         <Text>Balance: {balance}</Text>
-       </Screen>
+       <View style={[AppStyles.containerCentered, AppStyles.container, styles.container]}>
+         <Screen
+           headerText={headerText}
+           imgSrc={require('../../images/atm.png')}
+           btnText={isAwaitingCash ? 'I Got My Cash!' : 'Confirm Meetup'}
+           btnOnPress={isAwaitingCash ? this.handleCollectedCash : setAwaitingCash}
+         >
+           <Text>Location: Blk 71 Ayer Rajah, #03-24</Text>
+           <Text>Amount: {transDisp[0]} ({transDisp[1]} total)</Text>
+         </Screen>
+       </View>
      )
 
   }

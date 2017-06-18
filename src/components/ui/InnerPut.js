@@ -18,11 +18,10 @@ const styles = StyleSheet.create({
   },
 });
 
-
-export default function InnerPut({placeholder, onChangeText}) {
+export default function InnerPut({placeholder, onChangeText, ...props}) {
   return (
     <View>
-      <TextInput style={styles.input} placeholder={placeholder} onChangeText={onChangeText} />
+      <TextInput style={styles.input} placeholder={placeholder} onChangeText={onChangeText} {...props} />
       <View style={styles.inputLine} />
     </View>
   )

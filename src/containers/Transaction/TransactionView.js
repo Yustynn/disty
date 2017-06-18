@@ -72,7 +72,7 @@ class Transcation extends Component {
         btnText='Confirm'
         btnOnPress={this.props.setMatching}
       >
-        <InnerPut onChangeText={this.handleChangeText} />
+        <InnerPut keyboardType='numeric' onChangeText={this.handleChangeText} />
         <Text p>+$0.50 transfer fees</Text>
 
         <Text p>Total: ${(transactionAmt).toFixed(2)}</Text>
@@ -89,7 +89,7 @@ class Transcation extends Component {
          <Spacer size={40} />
         <Text h2>{headerText}</Text>
          <Spacer size={20} />
-        <Text p style={[AppStyles.textCenterAligned, styles.beerText]}>Grab a beer! We’ll send you a notification when we’ve found someone to cash you out!</Text>
+        <Text p style={[AppStyles.textCenterAligned, styles.beerText]}>Grab a doughnut! We’ll send you a notification when we’ve found someone to cash you out!</Text>
         <Spacer size={150} />
       </View>
     )
