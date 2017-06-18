@@ -51,6 +51,7 @@ export default Actions.create(
         analyticsDesc={'Placeholder: Coming Soon'}
       />
       <Scene
+        hideNavBar
         key={'success'}
         title={'Success!'}
         component={ConfirmScreen}

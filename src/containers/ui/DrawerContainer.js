@@ -79,7 +79,7 @@ class Drawer extends Component {
         disableGestures
       >
         <View style={{ backgroundColor: '#000', flex: 1 }}>
-          <DefaultRenderer navigationState={children.length-1} onNavigate={this.props.onNavigate} />
+          <DefaultRenderer navigationState={children[children.length-1]} onNavigate={this.props.onNavigate} />
         </View>
       </SideMenu>
     );

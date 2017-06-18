@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   View,
   Image,
+  StatusBar,
   StyleSheet,
 } from 'react-native';
 
@@ -56,7 +57,7 @@ class Screen extends Component {
           color={AppColors.brand.primaryLight} 
           size={30}
           containerStyle={styles.icon}
-          onPress={Actions.home}
+          onPress={() => Actions.authenticate({ type: 'reset' })}
         />
         <Image
           source={require('../../images/success.png')}

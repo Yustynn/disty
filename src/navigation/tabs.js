@@ -5,7 +5,7 @@
  * https://github.com/mcnamee/react-native-starter-app
  */
 import React from 'react';
-import { Scene } from 'react-native-router-flux';
+import { Scene, ActionConst } from 'react-native-router-flux';
 
 // Consts and Libs
 import { AppConfig } from '@constants/';
@@ -25,7 +25,6 @@ import RecipeView from '@containers/recipes/RecipeView';
 import Home from '@containers/Home/HomeContainer';
 import TopUp from '@containers/TopUp/TopUpContainer';
 import Transaction from '@containers/Transaction/TransactionContainer';
-import Matching from '@containers/Transaction/MatchingContainer';
 
 const navbarPropsTabs = {
   ...AppConfig.navbarProps,
@@ -74,14 +73,6 @@ const scenes = (
       component={Placeholder}
       icon={props => TabIcon({ ...props, type: 'ionicon', icon: 'ios-paper-outline' })}
       analyticsDesc={'Error: Example Error'}
-    />
-
-    <Scene
-      key={'matching'}
-      title={'Matching'}
-      component={Matching}
-      analyticsDesc={'Placeholder: Coming Soon'}
-      icon={props => TabIcon({ ...props, type: 'ionicon', icon: 'ios-close' })}
     />
 
     <Scene

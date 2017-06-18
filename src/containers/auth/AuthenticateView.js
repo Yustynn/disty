@@ -42,65 +42,67 @@ class Authenticate extends Component {
 
   componentDidMount() {
     console.log('MOUNTED\n\n\n\n')
-    Actions.home()
   }
 
-  render = () => (
-    <View style={[AppStyles.containerCentered, AppStyles.container, styles.background]}>
-      <Image
-        source={require('../../images/logo.png')}
-        style={[styles.logo]}
-      />
+  render = () => {
+    Actions.app()
+    return (
+      <View style={[AppStyles.containerCentered, AppStyles.container, styles.background]}>
+        <Image
+          source={require('../../images/logo.png')}
+          style={[styles.logo]}
+        />
 
-      <View style={[AppStyles.row, AppStyles.paddingHorizontal]}>
-        <View style={[AppStyles.flex1]}>
-          <Button
-            title={'Login'}
-            icon={{ name: 'lock' }}
-            onPress={Actions.login}
-            backgroundColor={'#CB009E'}
-          />
+        <View style={[AppStyles.row, AppStyles.paddingHorizontal]}>
+          <View style={[AppStyles.flex1]}>
+            <Button
+              title={'Login'}
+              icon={{ name: 'lock' }}
+              onPress={Actions.login}
+              backgroundColor={'#CB009E'}
+            />
+          </View>
         </View>
-      </View>
 
-      <Spacer size={10} />
+        <Spacer size={10} />
 
-      <View style={[AppStyles.row, AppStyles.paddingHorizontal]}>
-        <View style={[AppStyles.flex1]}>
-          <Button
-            title={'Sign up'}
-            icon={{ name: 'face' }}
-            onPress={Actions.signUp}
-            backgroundColor={'#CB009E'}
-          />
+        <View style={[AppStyles.row, AppStyles.paddingHorizontal]}>
+          <View style={[AppStyles.flex1]}>
+            <Button
+              title={'Sign up'}
+              icon={{ name: 'face' }}
+              onPress={Actions.signUp}
+              backgroundColor={'#CB009E'}
+            />
+          </View>
         </View>
-      </View>
 
-      <Spacer size={15} />
+        <Spacer size={15} />
 
-      <Text p style={[AppStyles.textCenterAligned, styles.whiteText]}>
-        - or -
-      </Text>
+        <Text p style={[AppStyles.textCenterAligned, styles.whiteText]}>
+          - or -
+        </Text>
 
-      <Spacer size={10} />
+        <Spacer size={10} />
 
-      <View style={[AppStyles.row, AppStyles.paddingHorizontal]}>
-        <View style={[AppStyles.flex1]} />
-        <View style={[AppStyles.flex2]}>
-          <Button
-            small
-            title={'Skip'}
-            onPress={Actions.app}
-            raised={false}
-            backgroundColor={'rgba(255,255,255,0.2)'}
-          />
+        <View style={[AppStyles.row, AppStyles.paddingHorizontal]}>
+          <View style={[AppStyles.flex1]} />
+          <View style={[AppStyles.flex2]}>
+            <Button
+              small
+              title={'Skip'}
+              onPress={Actions.app}
+              raised={false}
+              backgroundColor={'rgba(255,255,255,0.2)'}
+            />
+          </View>
+          <View style={[AppStyles.flex1]} />
         </View>
-        <View style={[AppStyles.flex1]} />
-      </View>
 
-      <Spacer size={40} />
-    </View>
-  )
+        <Spacer size={40} />
+      </View>
+    )
+  }
 }
 
 /* Export Component ==================================================================== */
