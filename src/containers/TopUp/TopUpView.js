@@ -62,7 +62,11 @@ class TopUp extends Component {
         btnText='Top Up!'
         btnOnPress={this.props.setMatching}
       >
-        <InnerPut onChangeText={this.handleChangeText} />
+        <InnerPut 
+          placeholder='enter code'
+          placeholderTextColor='#A8A8A8'
+          onChangeText={this.handleChangeText}
+        />
         <Text p>Current Balance: ${(balance)}</Text>
       </Screen>
     )

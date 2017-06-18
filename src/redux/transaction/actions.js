@@ -4,7 +4,7 @@ export const setAmount = (str) => {
 
 export const setMatching = () => dispatch => {
   dispatch({type: 'SET_TRANSACTION_MATCHING'})
-  setTimeout(() => dispatch({type: 'SET_TRANSACTION_MATCH_FOUND'}), 1000)
+  setTimeout(() => dispatch({type: 'SET_TRANSACTION_MATCH_FOUND'}), 10000)
 }
 
 export const setAwaitingCash = () => dispatch => {
