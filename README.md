@@ -7,7 +7,8 @@ Several developing countries paradoxically have decent mobile data coverage, but
 See, Disty looks at life as it truly is and sees the duality in human nature: We're not just flesh and blood. We're more than that - we're mobile, roaming, moving, wallets of cold hard cash! So let's turn people into the cash storage and withdrawal facilities for these developing countries. Monetary storage/withdrawal is a such a cornerstone for economic (and everything) growth that it seems ridiculous to even mention it. Let's help these countries be better.
 
 ## So what's it look like?
-There are slight deviations if you actually run this project (e.g. the TabBar is at the top), but it's pretty much this.
+There are slight deviations if you actually run this project (e.g. the TabBar is at the bottom in the actual app), but it's pretty much this.
+
 ![design](/readme_images/design.png)
 
 
