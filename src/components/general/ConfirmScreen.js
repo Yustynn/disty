@@ -46,7 +46,12 @@ const styles = StyleSheet.create({
 });
 
 /* Component ==================================================================== */
-class Screen extends Component {
+class ConfirmScreen extends Component {
+  handleOnClose = () => {
+    Actions.authenticate({type: 'reset'});
+    this.props.resetTransaction();
+  }
+
   render = () => {
     const {headerText, balance} = this.props;
 
@@ -57,7 +62,7 @@ class Screen extends Component {
           color={AppColors.brand.primaryLight} 
           size={30}
           containerStyle={styles.icon}
-          onPress={() => Actions.authenticate({ type: 'reset' })}
+          onPress={this.handleOnClose}
         />
         <Image
           source={require('../../images/success.png')}
@@ -73,4 +78,4 @@ class Screen extends Component {
   }
 }
 
-export default Screen;
+export default ConfirmScreen;

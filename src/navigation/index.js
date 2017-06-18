@@ -16,7 +16,7 @@ import Drawer from '@containers/ui/DrawerContainer';
 // Scenes
 import AppLaunch from '@containers/Launch/LaunchContainer';
 import Placeholder from '@components/general/Placeholder';
-import ConfirmScreen from '@components/general/ConfirmScreen';
+import ConfirmScreen from '@containers/ConfirmScreenContainer';
 import AuthScenes from './auth';
 import TabsScenes from './tabs';
 

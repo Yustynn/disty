@@ -1,3 +1,4 @@
+console.disableYellowBox = true;
 /**
  * Index - this is where everything
  *  starts - but offloads to app.js
